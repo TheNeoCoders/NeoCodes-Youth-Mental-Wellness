@@ -1,1 +1,1 @@
-web: gunicorn mental_health_chat:app
+web: ls -R && sleep 3600
