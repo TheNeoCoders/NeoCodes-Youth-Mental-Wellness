@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Mate - Mental Health Support for Young People</title>
+    <meta name="description" content="Youth mental health platform with AI chat, professional counseling, and wellness tracking designed specifically for young people's mental health needs." />
+    <meta name="author" content="MindCare Youth" />
+
+    <meta property="og:title" content="MindCare Youth - Mental Health Support for Young People" />
+    <meta property="og:description" content="Youth mental health platform with AI chat, professional counseling, and wellness tracking designed specifically for young people's mental health needs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://127.0.0.1:5500/images/IMG_20250908_100737.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="http://127.0.0.1:5500/images/IMG_20250908_100737.jpg" />
+    <link rel="icon" type="image/x-icon" href="/images/">
+    <link rel="stylesheet" href="font-awesome-4.7.0 - Copy/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in-up.delay-1 { animation-delay: 0.2s; }
+      .fade-in-up.delay-2 { animation-delay: 0.4s; }
+      .fade-in-up.delay-3 { animation-delay: 0.6s; }
+      .hero-image-animation {
+        opacity: 0;
+        transform: scale(0.95);
+        animation: scaleIn 0.8s ease-out 0.5s forwards;
+      }
+      @keyframes scaleIn {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      /* Add these new styles for a better hero image */
+      .hero-image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 500px; /* Adjust this value to make the image taller or shorter */
+        border-radius: 1rem; /* This matches the rounded-2xl class */
+        overflow: hidden; /* Keeps the image within the rounded corners */
+      }
+      .hero-image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This is the key: it covers the area and crops, but doesn't stretch */
+      }
+      /* Add these new styles for the overlay card on the hero image */
+      .hero-overlay-card {
+        position: absolute;
+        bottom: 1.5rem; /* Moved inside the image frame */
+        left: 1.5rem;
+        padding: 1rem;
+        border-radius: 0.75rem; /* rounded-xl */
+        z-index: 10;
+
+        /* Frosted glass effect */
+        background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px); /* For Safari support */
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+      }
+      .hero-overlay-card .title {
+        font-size: 1.5rem; /* text-2xl */
+        font-weight: 700; /* font-bold */
+        color: var(--foreground); /* Dark text for better contrast on the light blur */
+      }
+      .hero-overlay-card .subtitle {
+        font-size: 0.875rem; /* text-sm */
+        color: var(--foreground);
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="min-h-screen bg-gradient-soft">
+      <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <i data-lucide="brain" class="w-8 h-8 text-primary"></i>
+          <span class="text-xl font-bold text-foreground">Mind Mate</span>
+        </div>
+        <div class="flex gap-4">
+          <a href="login.html">
+            <button class="btn btn-outline">Login</button>
+          </a>
+          <a href="signup.html">
+            <button class="btn btn-wellness">Get Started</button>
+          </a>
+        </div>
+      </nav>
+
+      <section class="container mx-auto px-4 py-16">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <h1 class="text-5xl font-bold text-foreground leading-tight fade-in-up delay-1">
+                Your Mental Health,
+                <span class="text-primary"> Our Priority</span>
+              </h1>
+              <p class="text-xl text-muted-foreground leading-relaxed fade-in-up delay-2">
+                Connect with AI support, book professional counseling, and track your wellness journey. 
+                Designed specifically for youth mental health needs.
+              </p>
+            </div>
+            
+            <div class="flex gap-4 flex-wrap fade-in-up delay-3">
+              <a href="signup.html">
+                <button class="btn btn-hero btn-lg">
+                  <i data-lucide="heart" class="w-5 h-5"></i>
+                  Start Your Journey
+                </button>
+              </a>
+              <a href="login.html">
+                <button class="btn btn-outline btn-lg">
+                  <i data-lucide="message-circle" class="w-5 h-5"></i>
+                  Chat with AI Now
+                </button>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-8 text-sm text-muted-foreground fade-in-up delay-3">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-wellness rounded-full"></div>
+                Free to start
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                Professional support
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                Complete privacy
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-container hero-image-animation shadow-primary">
+            <img 
+              src="images/mental-health-hero.jpg" 
+              alt="Mental wellness illustration" 
+            />
+            <div class="hero-overlay-card">
+              <div class="title">24/7</div>
+              <div class="subtitle">AI Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4 py-16">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-3xl font-bold text-foreground">Everything you need for mental wellness</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto">
+            Comprehensive tools and support designed specifically for young people's mental health journey
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="wellness-card wellness-card-hover text-center">
+            <div class="card-header">
+              <i class="fa fa-comment-o" aria-hidden="true" style="font-size: 55px; color: hsl(189, 97%, 76%);"></i>
+              <div class="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <!-- <i data-lucide="message-circle" class="w-6 h-6 text-primary-foreground"></i> -->
+              </div>
+              
+              <h3 class="card-title text-lg" >AI Chat Support</h3>
+            </div>
+            <div class="card-content">
+              <p class="card-description">24/7 AI-powered mental health conversations and guidance</p>
+            </div>
+          </div>
+
+          <div class="wellness-card wellness-card-hover text-center">
+            <div class="card-header">
+              <i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 55px; color: hsl(189, 97%, 76%);"></i>
+              <div class="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <!-- <i data-lucide="calendar" class="w-6 h-6 text-primary-foreground"></i> -->
+              </div>
+              <h3 class="card-title text-lg">Book Counseling</h3>
+            </div>
+            <div class="card-content">
+              <p class="card-description">Schedule sessions with professional mental health counselors</p>
+            </div>
+          </div>
+
+          <div class="wellness-card wellness-card-hover text-center">
+            <div class="card-header">
+              <i class="fa fa-line-chart" aria-hidden="true" style="font-size: 55px; color: hsl(189, 97%, 76%);"></i>
+              <div class="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <!-- <i data-lucide="trending-up" class="w-6 h-6 text-primary-foreground"></i> -->
+              </div>
+              <h3 class="card-title text-lg">Progress Tracking</h3>
+            </div>
+            <div class="card-content">
+              <p class="card-description">Monitor your mental wellness journey with detailed insights</p>
+            </div>
+          </div>
+
+          <div class="wellness-card wellness-card-hover text-center">
+            <div class="card-header">
+              <i class="fa fa-shield" aria-hidden="true" style="font-size: 55px; color: hsl(189, 97%, 76%);"></i>
+              <div class="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <!-- <i data-lucide="shield" class="w-6 h-6 text-primary-foreground"></i> -->
+              </div>
+              <h3 class="card-title text-lg">Safe & Secure</h3>
+            </div>
+            <div class="card-content">
+              <p class="card-description">Your privacy and data security are our top priorities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gradient-calm text-primary-foreground py-16 rounded-t-3xl">
+        <div class="container mx-auto px-4 text-center space-y-8">
+          <h2 class="text-3xl font-bold">Ready to prioritize your mental health?</h2>
+          <p class="text-lg opacity-90 max-w-2xl mx-auto">
+            Join thousands of young people who are taking control of their mental wellness journey
+          </p>
+          <div class="flex gap-4 justify-center flex-wrap">
+            <a href="signup.html">
+              <button class="btn btn-secondary btn-lg">Start Free Today</button>
+            </a>
+            <a href="login.html">
+              <button class="btn btn-outline btn-lg cta-outline">Sign In</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

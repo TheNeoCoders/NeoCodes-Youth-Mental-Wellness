@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Mind Mate</title>
+    <meta name="description" content="Discover tools, exercises, and content to support your mental wellness journey.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .filter-btn {
+            background-color: var(--muted);
+            color: var(--muted-foreground);
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        .filter-btn:hover {
+            background-color: var(--primary-glow);
+            color: var(--primary);
+        }
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        .resource-card {
+            transition: var(--transition-smooth);
+        }
+        .resource-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+        .resource-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-soft">
+        <header class="bg-card border-b">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="user-dashboard.html" class="flex items-center gap-3" style="text-decoration: none;">
+                    <i data-lucide="brain" class="w-8 h-8 text-primary"></i>
+                    <span class="text-xl font-bold">Mind Mate</span>
+                </a>
+                <a href="user-dashboard.html" class="btn btn-outline btn-sm" style="text-decoration: none;">Back to Dashboard</a>
+            </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-8">
+            <section class="text-center mb-8">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight">Discover Resources</h1>
+                <p class="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
+                    Explore exercises, articles, and guided sessions to support your mental wellness journey.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <div id="resource-filters" class="flex flex-wrap items-center justify-center gap-3">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="exercise">Exercises</button>
+                    <button class="filter-btn" data-filter="article">Articles</button>
+                    <button class="filter-btn" data-filter="audio">Audio</button>
+                    <button class="filter-btn" data-filter="video">Videos</button>
+                </div>
+            </section>
+
+            <section>
+                <div id="resource-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="toast-container"></div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/resources.js"></script>
+</body>
+</html>
